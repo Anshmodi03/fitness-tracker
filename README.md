@@ -15,7 +15,7 @@ This is a Fitness Tracker application that helps users log and track their fitne
 
 You can explore the live demo of the application by visiting the following link:
 
-[**Live Demo**](https://your-deployed-url-here.com)
+[**Live Demo**](https://fitness-tracker-brown.vercel.app/)
 
 ## Installation
 
