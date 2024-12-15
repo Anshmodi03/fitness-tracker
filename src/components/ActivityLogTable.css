@@ -1,0 +1,344 @@
+/* Container for the Activity Log Table */
+.activity-log-table-container {
+  width: 100%;
+  max-width: 1200px; /* Increased max-width for a larger table */
+  margin: 0 auto;
+  padding: 20px;
+  background-color: transparent;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation Buttons Container */
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Pagination Icons */
+.pagination-icon-left,
+.pagination-icon-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: #4c4cff;
+  color: white;
+  font-size: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pagination-icon-left:hover,
+.pagination-icon-right:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(76, 76, 255, 0.3);
+}
+
+.pagination-icon-left:active,
+.pagination-icon-right:active {
+  transform: scale(0.9);
+}
+
+.pagination-icon-left svg,
+.pagination-icon-right svg {
+  display: block;
+  margin: auto;
+}
+
+/* Date Section */
+.date-section {
+  font-size: 18px;
+  font-weight: bold;
+  color: #00b7ff; /* Restored original date color */
+  text-align: center;
+  margin: 10px 0;
+}
+
+/* Table Styling */
+.activity-table {
+  width: 100%;
+  max-width: 1200px; /* Larger table width */
+  border-collapse: collapse;
+  margin-top: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.activity-table th,
+.activity-table td {
+  padding: 16px 20px; /* Increased padding for larger cells */
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.activity-table th {
+  background-color: #4c4cff;
+  color: white;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.activity-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.activity-table tr:hover {
+  background-color: #e6f7ff;
+  cursor: pointer;
+}
+
+.activity-table td {
+  font-size: 14px;
+  color: #333;
+  word-break: break-word;
+}
+
+/* Input Field for Editing */
+.activity-table input {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.activity-table input:focus {
+  border-color: #4c4cff;
+  box-shadow: 0 0 4px rgba(76, 76, 255, 0.3);
+  outline: none;
+}
+
+/* Save and Edit Icons */
+.save-icon,
+.edit-icon {
+  font-size: 16px; /* Reduced font size for the edit icon */
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.save-icon {
+  background-color: #4caf50;
+}
+
+.edit-icon {
+  background-color: #ff0000;
+}
+
+.save-icon:hover,
+.edit-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(76, 76, 255, 0.2);
+}
+
+/* Toast Notification */
+/* .p-toast {
+  width: 300px !important;
+  background-color: #4c4cff !important;
+  color: white !important;
+  font-weight: bold;
+  border-radius: 6px;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+} */
+/* Popup Container */
+.popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Popup Content */
+.popup-content {
+  background-color: rgb(139, 136, 136);
+  padding: 20px;
+  border-radius: 12px; /* More rounded corners */
+  width: 350px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Input Fields inside Popup */
+.popup-content input {
+  width: 90%;
+  padding: 12px;
+  margin-bottom: 15px; /* Increased spacing between inputs */
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.popup-content input:focus {
+  border-color: #4c4cff; /* Highlight input border on focus */
+  outline: none;
+}
+
+/* Popup Buttons */
+.popup-content button {
+  margin: 10px 5px; /* Spacing between buttons */
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  background-color: #4c4cff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.popup-content button:hover {
+  background-color: #3333cc; /* Darker blue on hover */
+  transform: translateY(-2px); /* Lift effect */
+}
+
+.popup-content button:active {
+  transform: translateY(0); /* Reset transform on click */
+}
+
+/* Cancel Button Style */
+.popup-content .cancel-button {
+  background-color: #ddd; /* Light grey for cancel button */
+  color: #333;
+}
+
+.popup-content .cancel-button:hover {
+  background-color: #bbb; /* Darker grey on hover */
+}
+
+/* Add New Entry Button */
+.add-new-entry-button {
+  background-color: #4c4cff;
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-align: center;
+  align-self: center;
+  margin-top: 20px;
+}
+
+.add-new-entry-button:hover {
+  background-color: #3333cc; /* Darker blue on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+.add-new-entry-button:active {
+  transform: translateY(0); /* Reset transform on click */
+}
+
+/* Responsive Popup Styling */
+@media (max-width: 600px) {
+  .popup-content {
+    width: 85%;
+  }
+
+  .popup-content input {
+    width: 100%; /* Full width input for smaller screens */
+  }
+
+  .popup-content button {
+    width: 100%; /* Full width buttons on smaller screens */
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .activity-log-table-container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .activity-table {
+    max-width: 100%; /* Full width for mobile */
+  }
+
+  .activity-table th,
+  .activity-table td {
+    font-size: 14px;
+    padding: 14px;
+  }
+
+  .pagination-icon-left,
+  .pagination-icon-right {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .activity-table {
+    max-width: 100%; /* Full width for mobile */
+  }
+
+  .navigation-buttons {
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  .activity-table th,
+  .activity-table td {
+    font-size: 12px;
+    padding: 12px;
+  }
+
+  .pagination-icon-left,
+  .pagination-icon-right {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+
+  .date-section {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .activity-log-table-container {
+    width: 100%;
+  }
+
+  .activity-table th,
+  .activity-table td {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .pagination-icon-left,
+  .pagination-icon-right {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .date-section {
+    font-size: 12px;
+  }
+}

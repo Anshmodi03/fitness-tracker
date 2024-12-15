@@ -1,0 +1,222 @@
+/* Container */
+.activity-log-container {
+  width: 100%;
+  max-width: 100%;
+  margin-top: 10px;
+  padding: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+/* Buttons */
+.p-button-sm {
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.p-button-secondary {
+  background-color: #4c4cff;
+  border-color: #4c4cff;
+  color: white;
+}
+
+.p-button-secondary:hover {
+  background-color: #3333cc;
+  border-color: #3333cc;
+  transform: scale(1.05);
+}
+
+.p-button-sm:disabled {
+  background-color: #ddd;
+  border-color: #ddd;
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+/* Table Styling */
+.activity-log-table {
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+.activity-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.activity-table th,
+.activity-table td {
+  padding: 16px 24px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.activity-table th {
+  background-color: #4c4cff;
+  color: white;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.activity-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.activity-table tr:hover {
+  background-color: #e6f7ff;
+  cursor: pointer;
+}
+
+.activity-table td {
+  font-size: 14px;
+  color: #333;
+  word-wrap: break-word;
+}
+
+/* Navigation Buttons */
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.navigation-buttons .p-button {
+  min-width: 120px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.date-section {
+  font-size: 16px;
+  font-weight: bold;
+  color: #00b7ff;
+  margin: 0 20px;
+  margin-top: 20px;
+}
+
+/* Progress Meters */
+.progress-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.progress-meter-container {
+  width: 140px;
+  height: 140px;
+  position: relative;
+  text-align: center;
+}
+
+.chart-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.percentage-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+.progress-label {
+  margin-top: 10px;
+  font-size: 14px;
+  color: white;
+  text-align: center;
+}
+
+/* Input Fields */
+.activity-table input {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.activity-table input:focus {
+  border-color: #4c4cff;
+  outline: none;
+  box-shadow: 0 0 3px rgba(76, 76, 255, 0.3);
+}
+
+/* Toast Notification */
+.p-toast {
+  width: 300px !important;
+  background-color: #4c4cff !important;
+  color: white !important;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .activity-log-container {
+    padding: 15px;
+  }
+
+  .activity-table th,
+  .activity-table td {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .p-button-sm {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+
+  .date-section {
+    font-size: 14px;
+  }
+
+  .p-button-sm {
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  .progress-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .activity-table th,
+  .activity-table td {
+    font-size: 11px;
+    padding: 8px;
+  }
+
+  .date-section {
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .progress-container {
+    gap: 10px;
+  }
+}

@@ -1,0 +1,103 @@
+/* Container for the Fitness Stats */
+.fitness-stats-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  font-family: "Arial", sans-serif;
+}
+
+/* Heading Styles */
+.fitness-stats-container h3 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #008cff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Input Group Styling */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 8px;
+}
+
+/* PrimeReact InputNumber Field Styling */
+.input-field {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #4c4cff;
+  box-shadow: 0 0 4px rgba(76, 76, 255, 0.3); /* Subtle glow */
+}
+
+/* Save Button Styling */
+.save-button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #4c4cff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.save-button:hover {
+  background-color: #3333cc; /* Darker blue */
+  transform: translateY(-2px); /* Lift effect */
+}
+
+.save-button:active {
+  background-color: #2222aa; /* Even darker blue */
+  transform: translateY(0); /* Reset lift on click */
+}
+
+/* Toast Notification */
+.p-toast {
+  width: 300px !important;
+  background-color: #4c4cff !important;
+  color: white !important;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .fitness-stats-container {
+    margin: 20px 10px;
+    padding: 15px;
+  }
+
+  .fitness-stats-container h3 {
+    font-size: 20px;
+  }
+
+  .input-field {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .save-button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}

@@ -1,0 +1,106 @@
+/* Container for the Header */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Soft shadow for better depth */
+  margin-bottom: 20px;
+  padding: 15px 25px;
+  position: relative;
+  top: 0;
+  z-index: 10; /* Ensure it stays above other elements */
+}
+
+/* Logo container */
+.logo-container {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.header-logo {
+  max-height: 130px; /* Adjust the logo size */
+  object-fit: contain;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+  filter: drop-shadow(
+    2px 2px 5px rgba(0, 0, 0, 0.2)
+  ); /* Add slight shadow for better visibility */
+}
+
+/* Navigation container */
+.nav-container {
+  display: flex;
+  justify-content: end;
+  gap: 25px;
+  flex-grow: 2;
+  margin-top: -50px;
+}
+
+/* Link styling */
+.nav-link {
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Button styles */
+.nav-button {
+  padding: 10px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 30px; /* Fully rounded buttons for a modern look */
+  border: 2px solid #4c4cff; /* Button border */
+  color: #ffffff;
+  background: transparent; /* Transparent background */
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+/* Button hover effects */
+.nav-button:hover {
+  background: #4c4cff; /* Bright blue fill */
+  color: #ffffff; /* White text */
+  box-shadow: 0px 8px 15px rgba(76, 76, 255, 0.3); /* Glow effect on hover */
+  transform: translateY(-3px); /* Lift effect */
+}
+
+/* Active button state */
+.nav-button:active {
+  transform: translateY(0); /* Reset lift effect */
+  background: #3a3acd; /* Slightly darker blue */
+  box-shadow: 0px 4px 8px rgba(58, 58, 205, 0.2); /* Subtle shadow on click */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    margin-top: -30px;
+    top: 0;
+  }
+
+  .nav-container {
+    flex-direction: row;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  .nav-button {
+    width: 100%; /* Full-width buttons on smaller screens */
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .header-logo {
+    max-height: 100px; /* Smaller logo for mobile */
+  }
+}
+
+/* Add subtle hover animation to all header links */
+.nav-link:hover {
+  transform: scale(1.05); /* Slight scaling */
+}

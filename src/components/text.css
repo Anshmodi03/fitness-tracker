@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Aboreto&display=swap");
+
+/* General SVG Styling */
+svg {
+  font-family: "Aboreto", sans-serif;
+  width: 100%;
+  height: auto; /* Adjusts height proportionally */
+  margin-top: -80px;
+}
+
+/* Animated Text */
+svg text {
+  animation: stroke 6s infinite alternate;
+  stroke-width: 2;
+  stroke: #ffffff;
+  font-size: 69px; /* Default font size for larger screens */
+  font-weight: 700;
+  text-anchor: middle; /* Ensures text stays centered */
+  dominant-baseline: middle; /* Ensures proper vertical alignment */
+}
+
+/* Animation Keyframes */
+@keyframes stroke {
+  0% {
+    fill: rgba(204, 204, 204, 0);
+    stroke: rgb(255, 255, 255);
+    stroke-dashoffset: 25%;
+    stroke-dasharray: 0 50%;
+    stroke-width: 2;
+  }
+  70% {
+    fill: rgba(204, 204, 204, 0);
+    stroke: rgb(255, 255, 255);
+  }
+  80% {
+    fill: rgba(204, 204, 204, 0);
+    stroke: rgb(192, 199, 197);
+    stroke-width: 3;
+  }
+  100% {
+    fill: rgb(255, 255, 255);
+    stroke: rgba(253, 159, 96, 0.74);
+    stroke-dashoffset: -25%;
+    stroke-dasharray: 50% 0;
+    stroke-width: 0;
+  }
+}
+
+/* Wrapper Styling */
+.wrapper {
+  background-color: transparent;
+  margin-bottom: -27px;
+  text-align: center; /* Ensures SVG is centered inside the wrapper */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  svg text {
+    font-size: 55px; /* Scaled font size for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  svg {
+    margin-top: -60px;
+  }
+
+  svg text {
+    font-size: 55px; /* Scaled font size for tablets */
+    stroke-width: 1.5;
+  }
+}
+
+@media (max-width: 576px) {
+  svg {
+    margin-top: -40px;
+  }
+
+  svg text {
+    font-size: 40px; /* Scaled font size for small screens */
+    stroke-width: 1;
+  }
+}
+
+@media (max-width: 375px) {
+  svg text {
+    font-size: 30px; /* Compact size for very small screens */
+    stroke-width: 1;
+  }
+}
