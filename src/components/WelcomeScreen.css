@@ -1,0 +1,106 @@
+/* Welcome Screen Container */
+.welcome-screen-container {
+  text-align: center;
+  margin: 0 auto; /* Centers the container */
+  padding: 20px; /* Adds padding for spacing */
+  background-color: transparent;
+}
+
+/* Heading Styles */
+h2 {
+  font-size: 28px; /* Larger font for better visibility */
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #ffe884; /* Improved text contrast */
+}
+
+/* Paragraph Styles */
+p {
+  font-size: 18px; /* Slightly larger for readability */
+  margin: 8px 0;
+  color: #a3d3ff; /* Subtle text color */
+}
+
+/* Slogan Styles */
+.slogan {
+  margin-top: 15px;
+  font-weight: 500;
+  color: #ffffff; /* Subtle blue for emphasis */
+  font-family: "Arial", sans-serif;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.slogan p {
+  margin: 0;
+  line-height: 1.6; /* Slightly increased line height for better spacing */
+  font-size: 20px; /* Larger font size for better emphasis */
+  color: #9cffe6;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  h2 {
+    font-size: 24px; /* Adjusted for medium screens */
+  }
+
+  p {
+    font-size: 16px; /* Slightly smaller for medium screens */
+  }
+
+  .slogan p {
+    font-size: 18px; /* Adjusted slogan font size */
+  }
+}
+
+@media (max-width: 768px) {
+  .welcome-screen-container {
+    padding: 15px; /* Reduced padding for smaller screens */
+  }
+
+  h2 {
+    font-size: 22px; /* Further reduced font size */
+  }
+
+  p {
+    font-size: 15px; /* Compact paragraph size */
+  }
+
+  .slogan p {
+    font-size: 16px; /* Adjusted for tablets */
+  }
+}
+
+@media (max-width: 576px) {
+  .welcome-screen-container {
+    padding: 10px; /* Minimal padding for mobile */
+  }
+
+  h2 {
+    font-size: 20px; /* Compact heading size */
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 14px; /* Smaller paragraph font size */
+  }
+
+  .slogan p {
+    font-size: 14px; /* Compact slogan font size */
+    line-height: 1.4; /* Tighter line spacing */
+  }
+}
+
+@media (max-width: 375px) {
+  h2 {
+    font-size: 18px; /* Smallest font size for very small screens */
+  }
+
+  p {
+    font-size: 12px;
+  }
+
+  .slogan p {
+    font-size: 12px;
+  }
+}
